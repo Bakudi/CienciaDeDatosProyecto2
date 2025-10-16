@@ -9,3 +9,26 @@ Hay tres variables categóricas clave (Date, type, region) que permitirán anál
 Las variables de volumen y bolsas muestran alta redundancia y posibles correlaciones fuertes.
 
 El dataset ofrece información rica y estructurada, apta para aplicar visualizaciones estadísticas y modelos predictivos.
+
+sobre heatmap:
+
+La matriz de correlación muestra cómo se relacionan las variables numéricas del dataset entre sí.
+El color representa la fuerza y dirección de la relación:
+
+🔴 Cercano a 1 → fuerte correlación positiva (aumentan juntas).
+
+🔵 Cercano a -1 → fuerte correlación negativa (una sube, la otra baja).
+
+⚪ Cercano a 0 → sin relación lineal relevante.
+
+ataset tiene 18.249 registros y 14 columnas, lo que es una muestra amplia y representativa.
+Ninguna columna tiene valores nulos (non-null count = 18249), lo cual simplifica el preprocesamiento — no hay necesidad de imputación por ahora.
+
+| Etapa                                  | Acción                                   | Justificación                          |
+| -------------------------------------- | ---------------------------------------- | -------------------------------------- |
+| 1. Eliminar columna `Unnamed: 0`       | No aporta valor analítico                | Simplifica el dataset                  |
+| 2. Convertir `Date` a datetime         | Permite análisis temporal                | Mejora calidad del dato                |
+| 3. Revisión de nulos                   | Confirmar que no se generen nuevos nulos | Prevención                             |
+| 4. Detección de outliers               | Boxplots e IQR                           | Identificar anomalías reales o errores |
+| 5. Conversión de categóricas a dummies | `type`, `region`                         | Necesario para análisis numérico       |
+| 6. Estandarización                     | `StandardScaler`                         | Igualar escalas de variables           |
