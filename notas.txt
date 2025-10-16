@@ -1,0 +1,11 @@
+El dataset está completo y sin valores nulos, listo para análisis.
+
+Existen 9 variables numéricas ideales para análisis descriptivo y modelado.
+
+La variable objetivo AveragePrice es continua y bien definida.
+
+Hay tres variables categóricas clave (Date, type, region) que permitirán análisis temporal y segmentado.
+
+Las variables de volumen y bolsas muestran alta redundancia y posibles correlaciones fuertes.
+
+El dataset ofrece información rica y estructurada, apta para aplicar visualizaciones estadísticas y modelos predictivos.
